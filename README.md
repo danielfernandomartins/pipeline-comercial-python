@@ -23,11 +23,20 @@ O projeto conecta **experiência comercial** com **lógica de programação**, m
 
 Este projeto evidencia capacidade de:
 
-- Traduzir processos comerciais em regras de negócio
-- Estruturar informações de pipeline
-- Trabalhar com indicadores de conversão
-- Organizar dados de clientes e oportunidades
+- Traduzir processos em regras de sistema
+- Estruturar informações e status
+- Trabalhar com indicadores
+- Organizar dados de usuários e registros
 - Automatizar controles operacionais simples
+- Entender dependência entre dado, regra e resultado
+
+## Visão para Operações de TI
+
+O projeto é útil para mostrar que consigo compreender um sistema pelo fluxo operacional: cadastro, mudança de status, cálculo e resultado.
+
+## Como explicar em entrevista
+
+> "Eu conhecia o processo comercial pelo lado do usuário e transformei esse fluxo em lógica de sistema. Isso me ajudou a desenvolver uma habilidade importante para suporte: entender o que o usuário faz, qual regra o sistema aplica e em que ponto uma ocorrência pode acontecer."
 
 ## Tecnologias e conceitos
 
