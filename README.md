@@ -1,57 +1,48 @@
-# Pipeline Comercial em Python
+# 📈 Pipeline Comercial em Python
 
-Sistema simples de gestão de oportunidades comerciais desenvolvido em Python.
+Sistema de apoio à gestão de oportunidades comerciais desenvolvido para traduzir um processo real de vendas em regras de negócio simples e mensuráveis.
 
-O projeto simula o acompanhamento de um pipeline de vendas, permitindo cadastrar oportunidades, acompanhar negociações e visualizar indicadores comerciais básicos.
+## Visão do projeto
+
+A aplicação simula o acompanhamento de um funil comercial, permitindo registrar oportunidades, acompanhar status de negociação e consolidar indicadores básicos de performance.
+
+O projeto conecta **experiência comercial** com **lógica de programação**, mostrando como processos de vendas podem ser estruturados em software.
 
 ## Funcionalidades
 
 - Cadastro de oportunidades
 - Registro de cliente e produto/serviço
-- Controle de status da negociação
+- Controle do estágio da negociação
 - Listagem das oportunidades cadastradas
-- Cálculo do valor total das oportunidades em aberto
-- Quantidade de oportunidades ganhas
-- Quantidade de oportunidades perdidas
+- Cálculo do valor total do pipeline em aberto
+- Quantidade de oportunidades ganhas e perdidas
 - Cálculo da taxa de conversão
-- Cálculo do valor total das vendas ganhas
+- Consolidação do valor total de vendas ganhas
 
-## Conceitos aplicados
+## Valor demonstrado
 
-- Variáveis
-- Listas
-- Dicionários
-- Funções
-- Estruturas condicionais
-- Loops
-- Operadores
-- Cálculos
-- Manipulação de strings
-- Regras de negócio
+Este projeto evidencia capacidade de:
 
-## Tecnologias utilizadas
+- Traduzir processos comerciais em regras de negócio
+- Estruturar informações de pipeline
+- Trabalhar com indicadores de conversão
+- Organizar dados de clientes e oportunidades
+- Automatizar controles operacionais simples
 
-- Python
-- Google Colab
-- GitHub
+## Tecnologias e conceitos
 
-## Objetivo do projeto
-
-Aplicar conceitos fundamentais de Python em um cenário de gestão comercial, transformando regras simples de negócio em funcionalidades de software.
+**Python** • Funções • Listas • Dicionários • Condicionais • Loops • Regras de negócio • Indicadores comerciais
 
 ## Próximas evoluções
 
-- Busca de oportunidade por cliente
-- Alteração de status da negociação
-- Exclusão de oportunidades
-- Relatórios por estágio do pipeline
-- Persistência de dados
-- Integração com banco de dados
+- Persistência em banco de dados
 - PostgreSQL
 - API REST com FastAPI
+- Relatórios por estágio do funil
 - Testes automatizados
-- Deploy da aplicação
+- Dashboard de indicadores
 
 ## Autor
 
-Daniel Fernando Martins
+**Daniel Fernando Martins**  
+Profissional de negócios com experiência em serviços financeiros, relacionamento com clientes e desenvolvimento comercial, atualmente ampliando sua atuação com tecnologia e análise de sistemas.
