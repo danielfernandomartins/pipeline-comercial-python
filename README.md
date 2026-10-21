@@ -1,95 +1,48 @@
-# 📈 Pipeline Comercial em Python
+# Pipeline comercial em Python
 
-> Projeto que traduz um processo comercial real em regras de software e indicadores de gestão, conectando **experiência de negócios + lógica de programação + visão analítica**.
+Aplicação interativa de estudo para cadastrar oportunidades e calcular indicadores básicos. Complementa o portfólio de dados com prática de Python e regras comerciais.
 
-## Problema
+[Notebook](pipeline_comercial_v1.ipynb) · [Abrir no Colab](https://colab.research.google.com/github/danielfernandomartins/pipeline-comercial-python/blob/main/pipeline_comercial_v1.ipynb)
 
-Equipes comerciais precisam acompanhar oportunidades, estágio de negociação, valor potencial, conversão e resultado. Quando esse processo não é estruturado, decisões ficam dependentes de controles manuais e pouca visibilidade do funil.
+## Funcionalidades implementadas
 
-## Solução
+- Cadastrar cliente, produto, valor e status.
+- Listar oportunidades registradas.
+- Somar valores em aberto nos status `prospeccao` e `negociacao`.
+- Contar oportunidades ganhas e perdidas.
+- Somar o valor das oportunidades ganhas.
+- Calcular ganhas / total de oportunidades cadastradas × 100.
 
-Este projeto simula um pipeline comercial em Python capaz de registrar oportunidades, acompanhar evolução e consolidar indicadores básicos de desempenho.
+O denominador da taxa inclui oportunidades abertas. Portanto, ela difere da taxa de ganho sobre oportunidades encerradas: ganhas / (ganhas + perdidas).
 
-A proposta não é apenas praticar sintaxe: é demonstrar como um processo conhecido do mundo de negócios pode ser convertido em **dados, estados, regras e métricas**.
+## Exemplo de conferência
 
-## Contexto de negócio
+Com uma oportunidade ganha de R$ 100, uma perdida de R$ 50 e uma em negociação de R$ 200:
 
-O projeto se conecta diretamente à minha trajetória em relacionamento com clientes, desenvolvimento comercial e serviços financeiros. Isso permite trabalhar software a partir de um problema que conheço pelo lado operacional e executivo.
+| Indicador | Resultado esperado pelas regras |
+|---|---:|
+| Total de oportunidades | 3 |
+| Valor em aberto | R$ 200 |
+| Valor ganho | R$ 100 |
+| Ganhas / total cadastrado | 33,33% |
+| Ganhas / encerradas, para comparação conceitual | 50% |
 
-## Funcionalidades
+A última métrica não é calculada pela versão atual.
 
-- cadastro de oportunidades;
-- registro de cliente e produto/serviço;
-- controle do estágio da negociação;
-- listagem de oportunidades;
-- cálculo do valor total do pipeline em aberto;
-- contagem de oportunidades ganhas e perdidas;
-- cálculo da taxa de conversão;
-- consolidação do valor de vendas ganhas.
+## Como executar
 
-## Fluxo de negócio
+Abra o notebook no Jupyter ou Colab e execute a célula do programa. Use o menu de 1 a 5; escolha 5 para encerrar. A aplicação usa apenas recursos nativos do Python.
 
-```mermaid
-flowchart LR
-    A[Nova oportunidade] --> B[Qualificação]
-    B --> C[Proposta]
-    C --> D[Negociação]
-    D --> E{Resultado}
-    E -->|Ganha| F[Receita consolidada]
-    E -->|Perdida| G[Perda registrada]
-    B --> H[Indicadores do funil]
-    C --> H
-    D --> H
-    F --> H
-    G --> H
-```
+## Limitações verificadas no código
 
-## O que este projeto demonstra
+- Dados apenas em memória; reiniciar a execução limpa os registros.
+- Não há edição de status ou histórico de transições.
+- Não há validação de status, valores negativos ou campos vazios.
+- Entradas não numéricas no valor podem interromper a execução.
+- Sem filtros temporais, persistência, dashboard ou testes automatizados.
 
-- tradução de processo de negócio em regras de sistema;
-- modelagem de estados e transições;
-- organização de dados com listas e dicionários;
-- criação de indicadores simples;
-- raciocínio sobre fluxo, entrada, regra e resultado;
-- capacidade de conectar tecnologia a um processo comercial real.
+## Próximas melhorias
 
-## Stack e conceitos
+Validar entradas e explicitar as duas definições de conversão; depois adicionar persistência e análises por período. São evoluções planejadas, não funcionalidades concluídas.
 
-**Python** · Funções · Listas · Dicionários · Condicionais · Loops · Regras de negócio · Indicadores comerciais
-
-## Decisões de implementação
-
-A versão atual foi mantida propositalmente simples para tornar o fluxo de negócio transparente. Antes de adicionar banco de dados, API ou framework, o foco foi garantir que as regras principais do funil fossem compreensíveis e verificáveis.
-
-## Limitações atuais
-
-- dados mantidos apenas em memória;
-- ausência de autenticação;
-- ausência de persistência em banco;
-- indicadores ainda básicos;
-- sem interface web ou API.
-
-Essas limitações são intencionais e definem a próxima etapa de evolução do projeto.
-
-## Roadmap
-
-1. persistência com PostgreSQL;
-2. API REST com FastAPI;
-3. testes automatizados;
-4. filtros por período, estágio e responsável;
-5. dashboard de conversão e valor por etapa;
-6. forecast simples de receita;
-7. análise de aging das oportunidades.
-
-## Como explicar em entrevista
-
-> "Eu já conhecia o pipeline comercial pelo lado de negócio. Neste projeto, transformei o fluxo em estados, regras e indicadores. O valor para mim foi exercitar a tradução entre necessidade de negócio e comportamento de sistema — uma competência importante em Business Analysis, Systems Analysis, Product Operations e desenvolvimento de soluções corporativas."
-
-## Próxima evolução de maior valor
-
-A evolução prioritária é transformar o projeto em uma pequena aplicação com **PostgreSQL + API REST + testes**, preservando a lógica de negócio já construída e tornando o case mais próximo de um sistema empresarial real.
-
-## Autor
-
-**Daniel Fernando Martins**  
-Profissional com experiência em serviços financeiros, relacionamento com clientes e desenvolvimento comercial, ampliando sua atuação na interseção entre **negócios, tecnologia, dados e sistemas**.
+**Autor:** Daniel Fernando Martins. Projeto de estudo, sem alegação de resultados empresariais.
